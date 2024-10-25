@@ -7,6 +7,7 @@ import Header from "@/app/(components)/Header";
 import Rating from "@/app/(components)/Rating";
 import CreateProductModal from "./CreateProductModal";
 import Image from "next/image";
+import productImg from "@/assets/product.png";
 
 type ProductFormData = {
   name: string;
@@ -81,9 +82,7 @@ const Products = () => {
             >
               <div className="flex flex-col items-center">
                 <Image
-                  src={`https://s3-inventorymanagement.s3.us-east-2.amazonaws.com/product${
-                    Math.floor(Math.random() * 3) + 1
-                  }.png`}
+                  src={productImg}
                   alt={product.name}
                   width={150}
                   height={150}
